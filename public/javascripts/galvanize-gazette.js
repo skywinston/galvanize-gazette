@@ -25,7 +25,7 @@ app.controller('homeCtrl', ["$scope", "$http", function ($scope, $http) {
         method: "GET",
         url: '/api/v1/stories'
     }).then(function (response) {
-        $scope.stories = response.data;
+        $scope.stories = response.data || [];
     });
 
     // Add Story Form hidden by default
