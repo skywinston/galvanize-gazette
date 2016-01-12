@@ -181,6 +181,7 @@ body {
 
   .story_summary {
     @include lato;
+    max-width: 512px;
     font-size: 16px;
     margin-bottom: 24px;
   }
