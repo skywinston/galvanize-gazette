@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var db = require('monk')('localhost/galvanize-gazette');
+var db = require('monk')(process.env.DB_URI || 'localhost/galvanize-gazette');
 var stories = db.get('stories');
 var opinions = db.get('opinions');
 
