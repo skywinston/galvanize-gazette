@@ -1,8 +1,166 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+.col, .col-center {
+  display: flex;
+  flex-flow: column; }
 
-a {
-  color: #00B7FF;
-}
+.col-center {
+  align-items: center; }
+
+.row, .row-center {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap; }
+
+.row-center {
+  align-items: center; }
+
+button,
+input[type="submit"] {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  padding: 8px 16px;
+  min-width: 96px;
+  max-width: 128px;
+  background-color: #f7901e;
+  color: white;
+  display: inline-block;
+  margin: 0 16px; }
+
+input,
+textarea {
+  font-family: 'Lato', sans-serif;
+  outline: none;
+  padding: 0 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  max-width: 400px;
+  border: 1px solid #BDBDBD;
+  border-radius: 2px; }
+  input:focus,
+  textarea:focus {
+    border: 1px solid #f7901e; }
+
+input {
+  height: 40px; }
+
+textarea {
+  height: 96px; }
+
+body {
+  font-family: 'Merriweather', serif;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column; }
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  padding: 24px 24px 24px 72px; }
+
+.gazette_banner {
+  width: 100%;
+  height: 96px;
+  padding: 24px 72px;
+  background-color: #f7901e;
+  color: white; }
+  .gazette_banner h1 {
+    margin: 0 0;
+    margin-bottom: 12px; }
+  .gazette_banner h4 {
+    margin: 0 0; }
+
+.story_form #story_form {
+  margin-bottom: 24px; }
+.story_form .story_form_toggle button {
+  background-color: #E8EAF6;
+  border: 1px solid #C5CAE9;
+  color: #3F51B5;
+  margin-left: 24px; }
+
+.story_rule {
+  width: 100%;
+  height: 1px;
+  background-color: #f7901e;
+  margin-top: 16px; }
+
+.stories_container {
+  margin-top: 24px; }
+
+.story_card {
+  margin: 0 16px 16px 0;
+  width: 296px;
+  border: 1px solid #E0E0E0;
+  border-radius: 2px; }
+  .story_card h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 16px;
+    box-sizing: border-box; }
+  .story_card p {
+    font-family: 'Lato', sans-serif; }
+  .story_card img {
+    display: block;
+    object-fit: cover;
+    width: 296px;
+    height: 222px; }
+
+.story_display {
+  margin-bottom: 32px; }
+  .story_display img {
+    width: 300px;
+    height: 225px;
+    display: block;
+    object-fit: cover;
+    border-radius: 2px;
+    margin-right: 32px; }
+  .story_display .story_summary {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin-bottom: 24px; }
+
+.opinion_form textarea {
+  width: 400px;
+  padding: 8px 4px; }
+.opinion_form input[type="submit"] {
+  margin-left: 0px; }
+
+.story_opinions {
+  margin-right: 72px;
+  width: 50%; }
+
+.story_opinion_entries {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #E0E0E0; }
+  .story_opinion_entries:first-of-type {
+    margin-top: 24px;
+    border-top: 1px solid #e0e0e0; }
+
+.story_stats {
+  width: 40%; }
+
+.word_stats {
+  font-family: 'Lato', sans-serif;
+  width: auto;
+  font-size: 14px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  border-radius: 2px;
+  background-color: #3F51B5;
+  color: white; }
+  .word_stats .word_count {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    font-weight: bold; }
+  .word_stats .word_instance {
+    margin-left: 12px; }
+
+/*# sourceMappingURL=style.css.map */

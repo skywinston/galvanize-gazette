@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="galvanizeGazette">
+    <header>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,700,700italic,400italic|Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+        <script src="/javascripts/galvanize-gazette.js"></script>
+        <base href="/" />
+    </header>
+    <body>
+        <div class="row-center gazette_banner">
+            <div class="col">
+                <h1>Galvanize Gazette</h1>
+                <h4>All the news that's fit to link to</h4>
+            </div>
+        </div>
+        <div class="container">
+            <ui-view></ui-view>
+        </div>
+    </body>
+</html>

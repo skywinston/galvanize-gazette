@@ -1,0 +1,30 @@
+<div class="story_form col">
+    <div class="row-center">
+        <h1>Add A Story</h1>
+        <div class="row center story_form_toggle">
+            <button ng-click="storyForm = !storyForm" ng-hide="storyForm">Show</button>
+            <button ng-click="storyForm = !storyForm" ng-show="storyForm">Hide</button>
+        </div>
+    </div>
+    <form ng-submit="addStory()" class="col" ng-show="storyForm" id="story_form">
+        <label for="story_title">Title</label>
+        <input type="text" id="story_title" ng-model="newStory.title">
+        <label for="story_link">Link </label>
+        <input type="text" id="story_link" ng-model="newStory.link">
+        <label for="story_image">Image URL </label>
+        <input type="url" id="story_image" ng-model="newStory.url">
+        <label for="story_summary">Story Summary</label>
+        <textarea name="story_summary" id="story_summary" cols="30" rows="10" ng-model="newStory.summary"></textarea>
+        <input type="submit" value="Link It Up!">
+    </form>
+    <div class="story_rule"></div>
+</div>
+<div class="stories_container col">
+    <h1>Today's News</h1>
+    <section class="stories row">
+        <div class="story_card" ng-repeat="story in stories" ui-sref="story({id: story._id})">
+            <img src="{{story.url}}" alt="">
+            <h3>{{story.title}}</h3>
+        </div>
+    </section>
+</div>

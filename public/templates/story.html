@@ -1,0 +1,33 @@
+<section class="story_display">
+    <h1>{{story.title}}</h1>
+    <div class="row">
+        <img src="{{story.url}}" alt="">
+        <div class="col">
+            <span class="story_summary">{{story.summary}}</span>
+            <a href="{{story.link}}">View Site</a>
+        </div>
+    </div>
+</section>
+<div class="story_rule"></div>
+<div class="row">
+    <section class="story_opinions col">
+        <h1>Opinions</h1>
+        <form ng-submit="saveOpinion()" class="col opinion_form">
+            <label for="story_opinion"></label>
+            <textarea ng-model="newOpinion" name="story_opinion" id="story_opinion"></textarea>
+            <input type="submit" value="Opine">
+        </form>
+        <section class="story_opinion_entries" ng-repeat="opinion in opinions">
+            {{opinion.opinion}}
+        </section>
+    </section>
+    <section class="story_stats col">
+        <h1>Story Stats</h1>
+        <div class="row">
+            <div class="row word_stats" ng-repeat="(word,count) in wordCount">
+                <span class="word_count">{{count}}</span>
+                <span class="word_instance">{{word}}</span>
+            </div>
+        </div>
+    </section>
+</div>

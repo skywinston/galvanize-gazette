@@ -1,0 +1,253 @@
+
+@mixin merriweather {
+  font-family: 'Merriweather', serif;
+}
+
+@mixin lato {
+  font-family: 'Lato', sans-serif;
+}
+
+// Utility positioning classes
+
+.col {
+  display: flex;   flex-flow: column;
+}
+
+.col-center {
+  @extend .col;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.row-center {
+  @extend .row;
+  align-items: center;
+}
+
+
+// APP-WIDE OVERRIDES
+button,
+input[type="submit"] {
+  @include lato;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  padding: 8px 16px;
+  min-width: 96px;
+  max-width: 128px;
+  background-color: #f7901e;
+  color: white;
+  display: inline-block;
+  margin: 0 16px;
+}
+
+input,
+textarea {
+  @include lato;
+  outline: none;
+  padding: 0 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  max-width: 400px;
+  border: 1px solid #BDBDBD;
+  border-radius: 2px;
+
+  &:focus {
+    border: 1px solid #f7901e;
+  }
+}
+
+input {
+  height: 40px;
+}
+
+textarea {
+  height: 96px;
+}
+
+body {
+  @include merriweather;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+}
+
+
+
+// BEGIN APP STYLING
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  padding: 24px 24px 24px 72px;
+}
+
+.gazette_banner {
+  width: 100%;
+  height: 96px;
+  padding: 24px 72px;
+  background-color: #f7901e;
+  color: white;
+
+  h1 {
+    margin: 0 0;
+    margin-bottom: 12px;
+  }
+
+  h4 {
+    margin: 0 0;
+  }
+}
+
+// STORY FORM COMPONENT
+
+.story_form {
+
+  #story_form {
+    margin-bottom: 24px;
+  }
+
+  .story_form_toggle {
+    button {
+      background-color: #E8EAF6;
+      border: 1px solid #C5CAE9;
+      color: #3F51B5;
+      margin-left: 24px;
+    }
+  }
+}
+
+.story_rule {
+  width: 100%;
+  height: 1px;
+  background-color: #f7901e;
+  margin-top: 16px;
+}
+
+
+// STORY CARD COMPONENT
+
+.stories_container {
+  margin-top: 24px;
+}
+
+.story_card {
+  margin: 0 16px 16px 0;
+  width: 296px;
+  border: 1px solid #E0E0E0;
+  border-radius: 2px;
+
+  h3 {
+    @include merriweather;
+    font-size: 18px;
+    margin: 0;
+    padding:  16px;
+    box-sizing: border-box;
+  }
+
+  p {
+    @include lato;
+  }
+
+  img {
+    display: block;
+    object-fit: cover;
+    width: 296px;
+    height: 222px;
+  }
+}
+
+
+// STORY DISPLAY COMPONENT
+
+.story_display {
+  margin-bottom: 32px;
+
+  img {
+    width: 300px;
+    height: 225px;
+    display: block;
+    object-fit: cover;
+    border-radius: 2px;
+    margin-right: 32px;
+  }
+
+  .story_summary {
+    @include lato;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+
+// OPINION FORM COMPONENT
+
+.opinion_form {
+  textarea {
+    width: 400px;
+    padding: 8px 4px;
+  }
+
+  input[type="submit"] {
+    margin-left: 0px;
+  }
+}
+
+.story_opinions {
+  margin-right: 72px;
+  width: 50%;
+}
+
+// OPINION ENTRIES
+.story_opinion_entries {
+  @include lato;
+  font-size: 14px;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #E0E0E0;
+
+  &:first-of-type {
+    margin-top: 24px;
+    border-top: 1px solid #e0e0e0;
+  }
+}
+
+
+// STORY STATS
+.story_stats {
+  width: 40%;
+}
+
+
+// WORD COUNT
+
+.word_stats {
+  @include lato;
+  width: auto;
+  font-size: 14px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  border-radius: 2px;
+  background-color: #3F51B5;
+  color: white;
+
+  .word_count {
+    @include merriweather;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .word_instance {
+    margin-left: 12px;
+  }
+}
+
